@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEDAI KOPI</title>
+    <!-- Fonts inknutAntiqua-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Nunito:ital,
+wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- PART 1(NAVIGATION) -->
+    <!-- NAV BAR START -->
+    <!--Struktur Navigasi Di bungkus oleh elemen <nav>-->
+    <nav class="navbar">
+    
+            <!-- Left BAR (Logo/Name) -->
+            <a href="#" class="navbar-logo">pahit<span>nikmat</span>.</a>
+
+            <!-- Mid Bar (Navigasi) -->
+            <div class="navbar-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Bar Button Info -->
+            <div class="navbar-extra">
+                <a href="#" id="search"><i data-feather="feather"></i></a>
+                <a href="#" id="shopping"><i data-feather="coffee"></i></a>
+                <a href="#" id="menu"><i data-feather="menu"></i></a>
+            </div>
+        
+    </nav>
+    <!-- NAV BAR END -->
+
+    <!-- PART 2(BANNER)-->
+    <!-- HERO SECTION START -->
+    <!--Struktur Hero(Banner) dibungkus oleh elemen <section> -->
+    <section class="banner" id="home"> <!--penambahan CTA me-redirect ke alamat home-->
+        <!-- Menggunakan elemen <main> di konteks part2nya kalau section di gunakan untuk membungkus seluruh elemen -->
+        <main class="content">
+            <h2>Monggo diunjuk <span>Wedang E.</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nulla at eos nobis expedita vitae labore! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, nobis!
+            </p>
+            <!-- Menambahkan Link untuk menuju alamat Home -->
+            <a href="#" class="cta">Beli Sekarang!</a>
+        </main>
+
+
+    </section>
+    <!-- HERO SECTION END -->
+
+    <!-- PART 3 ABOUT SECTION -->
+    <!-- ABOUT SECTION START -->
+    <section class="about" id="about">
+        <h2><span>Tentang</span> Kami</h2>
+
+        <!-- penambahan elemen div untuk menaruh gambar dan content -->
+        <div class="row">
+            <div class="about-img">
+                <img src="img/about.jpg" alt="About Us">
+            </div>
+            <div class="content">
+                <h4>Apa yang Membuat Kamu Kangen Kopi Kita?</h4>
+                <p>Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Ut assumenda, dolorem asperiores libero 
+                    quisquam reprehenderit. 
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Natus nobis ut consequuntur sint aut quidem tempora ullam explicabo. 
+                    Inventore, nam!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+    <!-- PART 4 MENU  -->
+    <!-- MENU SECTION START  -->
+    <section class="product" id="product">
+        <h2><span>Menu</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vel ratione saepe 
+            dignissimos voluptatibus corporis.
+        </p>
+
+        <div class="row">
+                <div class="product-1">
+                    <img src="img/menu/capucino.jpg" alt="capucino">
+                    <h3>- CAPUCINO -</h3>
+                    <p>IDR 18K</p>
+                </div>
+                <div class="product-1">
+                    <img src="img/menu/capucino.jpg" alt="latte">
+                    <h3>- LATTE -</h3>
+                    <p>IDR 16K</p>
+                </div>
+                <div class="product-1">
+                    <img src="img/menu/latte.jpg" alt="latte">
+                    <h3>- LATTE -</h3>
+                    <p>IDR 16K</p>
+                </div>
+                <div class="product-1">
+                    <img src="img/menu/latte.jpg" alt="latte">
+                    <h3>- LATTE -</h3>
+                    <p>IDR 16K</p>
+                </div>
+                <div class="product-1">
+                    <img src="img/menu/latte.jpg" alt="latte">
+                    <h3>- LATTE -</h3>
+                    <p>IDR 16K</p>
+                </div>
+                <div class="product-1">
+                    <img class="beda"src="img/menu/coffe.jpg" alt="coffe">
+                    <h3>- COFFE -</h3>
+                    <p>IDR 12K</p>
+                </div>
+                <div class="product-1">
+                    <img class="beda"src="img/menu/coffe.jpg" alt="coffe">
+                    <h3>- COFFE -</h3>
+                    <p>IDR 12K</p>
+                </div>
+        </div>
+    </section>
+    <!-- END MENU SECTION  -->
+    <!-- PART 5 CONTACT -->
+    <!-- START CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2><span>Kontak</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            mollitia quae fuga nesciunt esse numquam molestias 
+            illo qui natus provident.
+        </p>
+        <!-- Menambahkan Maps dan Form Commonet -->
+        <!-- 1. Menuju maps.google.com
+            2. Pilih Laksi lalu Embed map ambil Code HTMLnya-->
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sid!2sid!4v1731419147962!5m2
+!1sid!2sid!6m8!1m7!1s9C8xOC0j3d7UEwlZ9K3g8g!2m2!1d-7.926415804142763!2d112.0321778279131!3f343.
+3338236801482!4f0.8116457442884553!5f0.7820865974627469" 
+allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map">
+</iframe>
+        <!-- Menambah Teks di sebelah kanan google maps -->
+            <form action="">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" placeholder="nama">
+                </div>
+                <div class="input-group">
+                    <i data-feather="at-sign"></i>
+                    <input type="text" placeholder="email">
+                </div>
+                <div class="input-group">
+                    <i data-feather="map-pin"></i>
+                    <input type="text" placeholder="alamat">
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+    <!-- END CONTACT SECTION -->
+    
+    <!-- PART 6 (BOTTOM)FOOTER  -->
+    <!-- START FOOTER SECTION -->
+    <footer>
+        <div class="social">
+            <a href="https://www.instagram.com/"><i data-feather="instagram"></i></a>
+            <a href="https://www.facebook.com/"><i data-feather="facebook"></i></a>
+            <a href="https://www.linkedin.com/learning/"><i data-feather="linkedin"></i></a>
+        </div>
+        <div class="credit">
+            <p>Created By <a href="">Bagas Pradana</a>. | Copyright&copy; All rights can be reserved 2024.</p>
+        </div>
+        <div class="link">
+            <p id="datetime"></p>
+        </div>
+
+        
+    </footer>
+
+    <!-- END FOOTER SECTION -->
+
+
+
+
+
+
+    <!-- Feather Icons -->
+<script>feather.replace();</script>
+<!-- My Java Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

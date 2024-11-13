@@ -1,0 +1,574 @@
+/* Menentukan Variabel Untuk Warna */
+:root {
+    --primary : rgb(174, 163, 138);
+    --bg : rgb(218, 216, 216);
+    --coffe : rgb(120, 89, 10);
+    --coffe2 : rgba(120, 89, 10, 0.42);
+    --secondary : rgb(145, 125, 75);
+    --text : rgb(80, 62, 40);
+}
+
+/* RESET LAYOUT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; /*berguna ngasih style untuk button / link */
+    border: none; /*set diawal none border*/
+    text-decoration: none;
+}
+
+html {
+    /* Agar Smooth Scrolling */
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Inknut Antiqua", sans-serif;
+    background-color: var(--primary);
+    color: goldenrod;
+    /* min-height: 5000px;pemberian layout gradasi hitam supaya keliatan blend(unlimited halaman) */
+}
+
+/* PART 1 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 5%; 
+    padding-top: 10px;/* Membuat Space Kosong terluar */
+    background-color:  rgba(220, 220, 200, 0.7); /* Background Untuk Navigasi Dibuat Transparan */
+    border-bottom: 3px solid #AEA38A;
+    position: fixed;
+    /* tata letak nav bar agar posisinya terkunci */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* posisi selalu terletak di infront of object lainnya */
+    z-index: 10;
+
+}
+
+/* ----LEFT BAR------ */
+.navbar .navbar-logo {
+    font-size: 1.8rem;
+    font-family: "Sour Gummy", serif;
+    font-weight: bold;
+    color: rgb(145, 125, 75);
+    font-style: normal;
+    
+}
+.navbar .navbar-logo span {
+    font-size: 1.5rem;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-weight: normal;
+    color: rgb(133, 131, 127);
+    font-style: italic;
+}
+/* ----END LEFT BAR------ */
+
+/* ------MID BAR-------- */
+.navbar .navbar-nav {
+    width: 45%;
+    /* padding: 10px; */
+}
+ul {
+    list-style: none;
+}
+.navbar .navbar-nav ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navbar .navbar-nav ul li {
+    /* margin: 0px; */
+    /* position: relative; */
+}
+.navbar .navbar-nav ul li a {
+    color: rgb(145, 125, 75);
+    font-size: 1.3rem;
+    /* margin: 0 1rem; */
+}
+/* Sudo Elemen Efek cursor */
+.navbar .navbar-nav ul li a:hover {
+    color: var(--coffe);
+}
+/* Sudo Elemen Untuk efek Animasi sebelum */
+.navbar .navbar-nav ul li a::after {
+    content: ''; /* konten kosong agar bisaMengatur dimensi */
+    display: block;
+    padding-bottom: 0px;
+    margin-top: -0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.3s ease-in;
+    /* position: absolute;
+    top: 47px; */
+}
+/* Sudo Elemen Untuk efek Animasi sesudah */
+.navbar .navbar-nav ul li a:hover::after {
+    transform: scaleX(0.8);
+}
+
+/* ------ END MID BAR-------- */
+
+/* RIGHT BAR */
+.navbar .navbar-extra {
+
+}
+.navbar .navbar-extra a {
+    margin: 0 0.3rem;
+    color: rgb(145, 125, 75);
+}
+/* Sudo Elemen Efek cursor pada icon*/
+.navbar .navbar-extra a:hover {
+    color: var(--coffe);
+}
+/* Khusus hamburger menu akan di tampilkan di layar Smartphone */
+/* Pemberian class ID pada hamburger dengan Javascript */
+#menu {
+    display: none;
+}
+/* END RIGHT BAR */
+/* END PART 1 */
+
+
+
+/* PART 2 HERO(BANNER) */
+.banner { /*elemen heronya ingin memenuhi selauruh windows*/
+    min-height: 100vh; /* salah satu satuan yang dipake agar responsive (vh,rem,em,vw) */
+    display: flex; /*memberikan display flex pada pembungkus agar childnya bisa di sejajarkan secara vertikal*/
+    align-items: center;
+    background-image: url(../img/header1.jpg);
+    /* background-position: 0rem -0rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Membuat Gradasi antara Background dengan IMG Hero agar Blend */
+.banner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(174, 163, 138, 1) 10%, rgba(255, 255, 255, 0) 60%);
+}
+
+.banner .content {
+    padding: 10px 5%; 
+    max-width: 60rem;
+    position: absolute;
+    top: 16%;
+}
+.banner .content h2 {
+    font-size: 4em;
+    color: var(--secondary);
+    /* memberi Animasi SHadow */
+    text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.5) ;
+    line-height: 1.4; /*space antara Parapagaph*/
+}
+.banner .content h2 span {
+    color: rgb(209, 173, 91);
+}
+.banner .content p {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    line-height: 1.8; /*space antara Parapagaph*/
+    font-weight: 700;
+    color: var(--primary);
+    text-shadow: 1px 1px 3px rgba(218, 165, 32, 0.5);
+    /* menggunakan contrast pada text responsive dengan Background IMG */
+    mix-blend-mode: screen;
+}
+.banner .content .cta {
+    margin-top: 1rem;
+    padding: 0.5rem 1.8rem;
+    display: inline-block; /* kalau inline tidak bisa diatur margin dan paddingnya */
+    font-size: 2rem;
+    color: goldenrod;
+    background-color: var(--coffe);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(218, 165, 32, 0.5);
+}
+/* END PART 2 HERO(BANNER) */
+
+/* START PART 3 ABOUT US */
+.about {
+    padding: 6.1rem 5% 1.4rem; /*format atas, bawah, kiri, kanan*/
+}
+.about h2 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+.about h2 span {
+    color: rgb(213 196 156);
+}
+/* Konsep Elemen pembungkus agar mudah menata elemen isinya (child) gunakan Display Flex */
+.about .row {
+    display: flex;
+}
+/* Style IMG */
+.about .row .about-img {
+    flex: 1 1 47rem; /* grow = 1 shrink = 1*/
+}
+.about .row .about-img img {
+    width: 100%;
+}
+/* END Style IMG */
+
+/* STYLE CONTENT */
+.about .row .content {
+    flex: 1 1 30rem;
+    padding: 0 1rem;
+}
+.about .row .content h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 3.2rem;
+    color: var(--coffe);
+}
+.about .row .content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.2 rem;
+    line-height: 2.5rem;
+    color: var(--text);
+}
+/* END PART 3 ABOUT US */
+/* PART 4 MENU */
+.product {
+    padding: 6.1rem 5% 1.4rem;
+}
+.product h2 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.product h2 span {
+    color: rgb(213 196 156);
+}
+.product p {
+    text-align: center;
+    max-width: 40rem;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    color: var(--text);
+    
+}
+.product .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+.product .row .product-1 {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+.product .row .product-1 img {
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong*/
+    object-position: bottom; 
+    border-radius: 50%;
+    
+}
+.product .row .product-1 p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: rgba(80, 62, 40, 0.75);
+}
+.product .row .product-1 h3 {
+    margin: 1.5rem auto 0.1rem;
+    color: var(--text);
+}
+.product .row .product-1 .beda {
+    object-position: center; 
+}
+/* END PART 4 MENU */
+/* START PART 5 CONTACT */
+.contact {
+    padding: 6.1rem 5% 6rem;
+}
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--secondary);
+}
+.contact h2 span {
+    color: rgb(213 196 156);
+}
+.contact p {
+    margin: auto;
+    max-width: 40rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+    text-align: center;
+    color: var(--text);
+}
+.contact .row {
+    display: flex;
+    margin-top: 3rem;
+    background-color: rgba(164, 151, 121, 0.5);
+    border-radius: 10px;
+    /* flex-wrap: wrap; disimpan disaat @media */
+}
+.contact .row .map {
+    flex: 1 1 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contact .row form {
+    flex: 1 1 30rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.contact .row form .input-group {
+    display: flex;
+    align-items: center; /*perataan X */
+    margin-top: 2rem;
+    padding-left: 2rem;
+    color: var(--coffe);
+    background-color: var(--primary);
+    border: 1px solid var(--coffe);
+    border-radius: 10px;
+}
+.contact .row form .input-group input {
+    width: 100%;
+    padding: 1.5rem;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    background: none;
+    color: var(--coffe);
+    
+}
+.contact .row form .input-group input::placeholder {
+    color: var(--coffe2);
+}
+.contact .row form .btn {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0rem 1rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-family: "Inknut Antiqua", sans-serif;
+    color: goldenrod;
+    background-color: var(--coffe);
+    cursor: pointer;
+}
+/* END PART 5 CONTACT */
+
+
+/* START PART 6 FOOTER */
+    footer {
+        display: flex;
+        background-color: rgba(220, 220, 200, 0.55);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 1rem;
+        height: 4rem;
+        /* margin: 1rem 1rem 0rem; */
+    }
+    footer .social {
+        width: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 20%;
+        
+    }
+    footer .social a {
+        max-height: 25px;
+        color: rgb(145, 125, 75);
+    }
+    footer .credit {
+        font-size: 1rem;
+        color: rgb(145, 125, 75);
+        width: 60%;
+        text-align: center;
+    }
+    footer .credit a {
+        color: black;
+    }
+    footer .link {
+        font-size: 1.3rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 20%;
+        color: var(--coffe);
+        text-align: center;
+    
+    }
+    /* footer .link ul {
+        display: flex;
+        width: 23rem;
+        justify-content: center;
+    }
+    footer .link ul li {
+        display: inline-block;
+        margin: 0.6rem;
+        color: rgb(145, 125, 75);
+    }
+    footer .link ul li a {
+        color: rgb(145, 125, 75);
+    } */
+
+
+/* END PART 5 FOOTER */
+
+
+
+
+
+
+/* DESIGN RESPONSIVE */
+/* Kalau default desktop 1920px */
+/* Laptop */
+@media only screen and (max-width: 1366px) {
+    html {
+        font-size: 73%;
+    }
+    /* PART 2 HERO SECTION */
+    .banner .content {
+        top: 30%;
+    }
+    /* END PART 2 HERO SECTION */
+}
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+    /* PART 1 NAVBAR */
+    #menu {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        /* memindahkan elemen navigasi */
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        /* layout elemen navigasi */
+        background-color: var(--secondary);
+        width: 25rem;
+        height: 100vh;
+        /* Making Transition */
+        transition: 1s;
+    }
+    .navbar .navbar-nav.active {
+        right: -3px;
+        border-radius: 1.5%;
+    }
+    .navbar .navbar-nav ul {
+        
+        display: block;
+    }
+    .navbar .navbar-nav ul li {
+        display: block;
+        text-align: center;
+    }
+    .navbar .navbar-nav ul li a {
+        color: var(--bg);
+        padding: 3rem;
+        padding-top: 8%;
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+    .navbar .navbar-nav ul li a::after{
+        transform-origin: -10px 0;
+    }
+    .navbar .navbar-nav ul li a:hover::after {
+        color: var(--primary);
+        transform: scaleX(1.02);
+    }
+    /* END PART 1 */
+
+    /* PART 2 HERO(BANNER) */
+    .banner {
+        background-position: 0rem 6.5rem;
+    }
+    /* END PART 2 HERO(BANNER) */
+    /* PART 3 ABOUT US */
+    .about .row {
+        flex-wrap: wrap; /* JIka konten ga muat akan memuat baris dibawahnya */
+    }
+    /* Pengaturan Layout IMG coffe */
+    .about .row .about-img img {
+        height: 31rem;
+        object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong*/
+        object-position: bottom; 
+    }
+    .about .row .content {
+        padding: 0;
+    }
+    .about .row .content h4 {
+        margin-top: 1rem;
+        font: size 1.6;
+    }
+    .about .row .content p {
+        font-size: 1.2rem;
+    }
+    .contact .row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .contact .row .map {
+        height: 35rem;
+        min-width: 40rem;
+    }
+    .contact .row form {
+        padding-top: 1.2rem;
+    }
+    /* END PART 3 ABOUT US */
+
+    
+
+    /* Animasi Agar Auto click Auto Disappear */
+    /* navigasi Auto Disappear */
+}
+
+/* Handphone */
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 52%;
+    }
+    /* Pengaturan Layout IMG coffe */
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong */
+        object-position: bottom;
+    }
+    .about .row .content p {
+        font-size: 1.4rem;
+    }
+    footer .credit {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+    footer .sosial{
+        width: 20%;
+    }
+    footer .credit {
+        width: 50%;
+    }
+    footer .link {
+        width: 20%;
+    }
+}
+
+
+
