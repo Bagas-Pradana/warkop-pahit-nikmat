@@ -411,7 +411,6 @@ ul {
         width: 20%;
         color: var(--coffe);
         text-align: center;
-    
     }
     /* footer .link ul {
         display: flex;
@@ -554,6 +553,9 @@ ul {
     }
     .about .row .content p {
         font-size: 1.4rem;
+    }
+    footer {
+        height: 6rem;
     }
     footer .credit {
         font-size: 1rem;
