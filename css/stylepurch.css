@@ -1,0 +1,59 @@
+table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+    }
+    td .box {
+    text-align: center;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        height: 8rem;
+        width: 52rem;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .pagination a {
+        margin: 0 5px;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        color: #333;
+        align-items: center;
+    }
+    .pagination2 p {
+        margin: 0 5px;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #333;
+        align-self: flex-end;
+    }
+
+    .pagination a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .pagination .active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .sinkrondata a {
+        margin: 0 5px;
+        padding: 4px 8px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sinkrondata a:hover {
+        background-color: #f0f0f0;
+    }

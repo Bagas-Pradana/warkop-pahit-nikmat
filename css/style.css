@@ -293,6 +293,27 @@ ul {
 .product .row .product-1 .beda {
     object-position: center; 
 }
+.product .row .product-2 img {
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong*/
+    object-position: center; 
+    border-radius: 50%;
+}
+.product .row .product-3 img {
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong*/
+    object-position: -1px -77px; 
+    border-radius: 50%;
+}
+.product .row .product-4 img {
+    width: 22rem;
+    height: 22rem;
+    object-fit: cover; /*Menyesuaikan corp gambar jika gambar terkesan lonjong*/
+    object-position: 1px -63px; 
+    border-radius: 50%;
+}
 /* END PART 4 MENU */
 /* START PART 5 CONTACT */
 .contact {
