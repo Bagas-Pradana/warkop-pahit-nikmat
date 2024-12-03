@@ -1,0 +1,188 @@
+.bg-green {
+    background-color: green !important;
+}
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(320deg, #e6f9a6, #7dffff, #fdfb91);
+    display: flex;
+    font-family:'DM Sans';
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+div.container {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(60, 60, 60, 0.1);
+    color: rgb(145, 125, 75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    flex-basis: 400px;
+    height: 370px;
+    padding: 20px 5px;
+    margin: 5px auto;
+    position: absolute;
+    bottom: 17%;
+    display: flex;
+    height: 22rem;
+    width: 20rem;
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+div.container h3{
+    display: flex;
+    margin: 5px auto;
+    position: absolute;
+    z-index: 1;
+    left: 17.5%;
+    top: 5%;
+    justify-content: center;
+}
+form ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+form ul li label {
+    border: none;
+}
+label:focus {
+    border: 2px solid transparent;  /* Menghilangkan border default */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Menambahkan bayangan biru saat fo*/
+}
+form ul li input {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(60, 60, 60, 0.1);
+    color: rgb(145, 125, 75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(145, 125, 75, 0.5);
+    border-radius: 5px;
+    height: 1.85rem;
+}
+input:focus {
+    outline: none;
+}
+form ul li.cookie{
+    display: flex;
+    margin: 0.75rem 0.42rem;
+    padding: 0.4rem 0.1rem;
+    justify-content: flex-start;
+    column-gap: 0.6rem;
+}
+form ul li.cookie input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(145, 125, 75);
+    border: 2px solid rgb(145, 125, 75);
+    border-radius: 4px;
+}
+form ul li.cookie label {
+    font-size: small;
+    font-weight: bold;
+    color: rgb(119, 103, 62);
+}
+form ul button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(60, 60, 60, 0.1);
+    color: rgb(145, 125, 75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-color: rgb(145, 125, 75);
+    border-radius: 5px;
+    width: 13.2rem;
+    height: 1.8rem;
+    line-height: 3;   
+}
+.login{
+    height: 1.4rem;
+}
+form p {
+    padding: 10px 5px;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(119, 103, 62);
+    text-align: center;
+}
+.box {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(60, 60, 60, 0.1);
+    color: rgb(145, 125, 75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-color: rgb(145, 125, 75);
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+.box a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 2px 1px;;
+}
+.box:hover{
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+.enter{
+    height: 1.4rem;
+    color: rgb(145, 125, 75);
+}
+a.home {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    box-shadow: 0 4px 30px rgba(60, 60, 60, 0.1);
+    color: rgb(145, 125, 75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-color: rgb(145, 125, 75);
+    border-radius: 5px;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 2px 1px;
+    height: 2.2rem;
+    width: 2.8rem;
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0.8rem;
+}
+a.home:hover{
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+.home{
+    height: 1.8rem;
+    color: rgb(145, 125, 75);
+}
